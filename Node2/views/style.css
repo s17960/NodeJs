@@ -1,0 +1,11 @@
+form{
+    float: left;
+    padding: 20px;
+}
+
+label{
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    padding: 1px 5px 7px 5px;
+}

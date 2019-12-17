@@ -1,0 +1,17 @@
+Dodaje do bazy:
+db.Osoba.insert({Imie:"Marcin",Nazwisko:"Sekrecki",Miasto:"Warszawa"})
+db.Osoba.insert({Imie:"Krzysztof",Nazwisko:"Kornacki",Miasto:"Sochaczew"})
+db.Osoba.insert({Imie:"Jan",Nazwisko:"Kowalski",Miasto:"Poznań"})
+db.Osoba.insert({Imie:"Alan",Nazwisko:"Nowak",Miasto:"Kraków"})
+
+Usuwa z bazy:
+db.Osoba.remove({Imie:"Marcin"})
+db.Osoba.remove({Miasto:"Warszawa"})
+
+Aktualizuje w bazie:
+db.Osoba.update({Imie:"Marcin"},{$set:{Miasto:"Kraków"}})
+db.Osoba.update({Imie:"Marcin"},{Imie:"Marcin",Nazwisko:"Sekrecki",Miasto:"Kraków"})
+
+Znajduje w bazie:
+db.Osoba.find({Imie:"Marcin"})
+db.Osoba.find({Miasto:"Kraków,Imie:"Marcin"})
