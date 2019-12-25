@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <title>Form</title>
+    <script>
+        function checkTask(){
+            var x = document.forms["addTaskForm"]["textInput"].value;
+            if (x == ""){
+                document.getElementById("error").className = "showed";
+                return false;
+            }
+            else{
+                document.getElementById("error").className = "hidden";
+                return true;
+            }       
+        }
+    </script>
+</head>
+<body>
+    <div id="table">
+        <div id="center">
+            <h1>Zadania</h1>
+
+            <div class="tabs">
+                <a class="tab" aria-selected="true" role="tab" href="/">Do zrobienia</a>
+                <a class="tab" aria-selected="false" role="tab" href="/done">Zrobione</a>
+            </div>
+
+            <form name="addTaskForm" action="/addTask" method="POST">
+                <p>Dodaj zadanie:</p>
+                <input id="textInput" type="text" name="task">
+                <button id="addTaskButton" onclick="return checkTask()">Zatwierdź</button>
+                <p id="error" class="hidden">Zadanie jest puste</p>
+            </form>
+            
+            
+            <ul>
+                <% var iter = 1 %>
+                <% tasks.forEach(function (task){ %>
+                    <li>
+                        <form action="doneTask/<%= task.id %>?_method=PUT" method="POST">
+                            <label><%= iter + '. ' + task.Text %></label>
+                            <button id="doneTaskButton" type="submit">Zrobione</button>
+                        </form>
+                    </li>
+                    <% iter++ %>
+                <% }) %>
+            </ul>
+
+            
+        </div>
+    </div>
+</body>
+</html>

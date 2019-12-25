@@ -1,0 +1,103 @@
+*{
+    color: rgb(247, 255, 134);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    border-radius: 30px;
+}
+
+body{
+    background-color: black;
+    position: relative;
+}
+
+#table{
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(247, 255, 134);
+    padding: 10px;
+    overflow: hidden;
+}
+
+#center{
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+    text-align: left;
+}
+
+#textInput{
+    text-align: left;
+    background-color: black;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    width: 79%;
+    min-width: 100px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+li{
+    text-align: left;
+}
+
+#addTaskButton{
+    background-color: black;
+    display: inline-block;
+    font-size: 20px;
+    width: 20%;
+    text-size-adjust: auto;
+    min-width: 110px;
+}
+
+label{
+    display: inline-block;
+    font-size: 19px;
+}
+
+#doneTaskButton{
+    font-size: 15px;
+    float: right;
+}
+
+#clearButton{
+    float: left;
+    font-size: 20px;
+    position: relative;
+    margin-left: 25px;
+}
+
+.tab{
+    display: inline-block;
+}
+
+a[aria-selected="false"]{
+    color: red;
+}
+
+a{
+    border-bottom: ridge;
+    text-decoration: none;
+}
+
+.hidden{
+    visibility: hidden;
+    font-size: 15px;
+}
+
+.showed{
+    font-size: 15px;
+    color: red;
+}
+
+#lined{
+    text-decoration: line-through;
+}
+
+li{
+    margin-bottom: 3px;
+}

@@ -14,4 +14,4 @@ db.Osoba.update({Imie:"Marcin"},{Imie:"Marcin",Nazwisko:"Sekrecki",Miasto:"Krak�
 
 Znajduje w bazie:
 db.Osoba.find({Imie:"Marcin"})
-db.Osoba.find({Miasto:"Kraków,Imie:"Marcin"})
+db.Osoba.find({Miasto:"Kraków",Imie:"Marcin"})
